@@ -1,17 +1,16 @@
 Model {
   Name			  "AM1"
-  Version		  8.3
+  Version		  8.4
   MdlSubVersion		  0
-  SavedCharacterEncoding  "windows-1252"
+  SavedCharacterEncoding  "ISO-8859-1"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.155"
+    ComputedModelVersion    "1.156"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
-  SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
@@ -30,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [16.0, 52.0, 1204.0, 930.0]
+      Location		      [568.0, 341.0, 1204.0, 930.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -39,7 +38,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -54,9 +53,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1154.0, 756.0]
-	ZoomFactor		[1.0]
-	Offset			[-15.125, 0.0]
+	Extents			[1170.0, 760.0]
+	ZoomFactor		[1.75]
+	Offset			[-10.1103422619053, 7.057142857143166]
       }
     }
   }
@@ -64,11 +63,11 @@ Model {
   Creator		  "fapojuwo"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "maalmasr"
+  LastModifiedBy	  "benjaminhilborn"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jan 18 17:38:49 2015"
-  RTWModifiedTimeStamp	  343503506
-  ModelVersionFormat	  "1.%<AutoIncrement:155>"
+  LastModifiedDate	  "Mon Feb 09 23:51:57 2015"
+  RTWModifiedTimeStamp	  345423649
+  ModelVersionFormat	  "1.%<AutoIncrement:156>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -86,6 +85,7 @@ Model {
   SortedOrder		  off
   ExecutionContextIcon	  off
   ShowLinearizationAnnotations on
+  ShowMarkup		  on
   BlockNameDataTip	  off
   BlockParametersDataTip  on
   BlockDescriptionStringDataTip	on
@@ -142,6 +142,9 @@ Model {
   CovSFcnEnable		  off
   CovBoundaryAbsTol	  0.000010
   CovBoundaryRelTol	  0.010000
+  CovUseTimeInterval	  off
+  CovStartTime		  0
+  CovStopTime		  0
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -171,13 +174,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      7
-      Version		      "1.14.2"
+      Version		      "1.14.3"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
 	  $ObjectID		  8
-	  Version		  "1.14.2"
+	  Version		  "1.14.3"
 	  StartTime		  "0.0"
 	  StopTime		  "0.5"
 	  AbsTol		  "auto"
@@ -212,7 +215,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  9
-	  Version		  "1.14.2"
+	  Version		  "1.14.3"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -245,7 +248,7 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  10
-	  Version		  "1.14.2"
+	  Version		  "1.14.3"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    6
@@ -261,7 +264,7 @@ Model {
 	  BooleanDataType	  on
 	  ConditionallyExecuteInputs on
 	  InlineParams		  off
-	  UseIntDivNetSlope	  off
+	  UseDivisionForNetSlopeComputation "Off"
 	  UseFloatMulNetSlope	  off
 	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
@@ -303,7 +306,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  11
-	  Version		  "1.14.2"
+	  Version		  "1.14.3"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -390,10 +393,11 @@ Model {
 	  SFUnconditionalTransitionShadowingDiag "warning"
 	  SFUndirectedBroadcastEventsDiag "warning"
 	  SFTransitionActionBeforeConditionDiag	"warning"
+	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  12
-	  Version		  "1.14.2"
+	  Version		  "1.14.3"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -434,7 +438,7 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  13
-	  Version		  "1.14.2"
+	  Version		  "1.14.3"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -449,7 +453,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  14
-	  Version		  "1.14.2"
+	  Version		  "1.14.3"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -465,7 +469,7 @@ Model {
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  15
-	  Version		  "1.14.2"
+	  Version		  "1.14.3"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    6
@@ -543,7 +547,7 @@ Model {
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      16
-	      Version		      "1.14.2"
+	      Version		      "1.14.3"
 	      Array {
 		Type			"Cell"
 		Dimension		17
@@ -608,12 +612,12 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      17
-	      Version		      "1.14.2"
+	      Version		      "1.14.3"
 	      Array {
 		Type			"Cell"
-		Dimension		15
+		Dimension		14
 		Cell			"IncludeMdlTerminateFcn"
-		Cell			"CombineOutputUpdateFcns"
+		Cell			"SupportNonInlinedSFcns"
 		Cell			"SuppressErrorStatus"
 		Cell			"ERTCustomFileBanners"
 		Cell			"GenerateSampleERTMain"
@@ -626,7 +630,6 @@ Model {
 		Cell			"SupportComplex"
 		Cell			"SupportAbsoluteTime"
 		Cell			"SupportContinuousTime"
-		Cell			"SupportNonInlinedSFcns"
 		PropName		"DisabledProps"
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
@@ -667,12 +670,14 @@ Model {
 	      SupportVariableSizeSignals off
 	      EnableShiftOperators    on
 	      ParenthesesLevel	      "Nominal"
+	      CastingMode	      "Nominal"
 	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
 	      ModelStepFunctionPrototypeControlCompliant off
 	      CPPClassGenCompliant    on
 	      AutosarCompliant	      off
 	      GRTInterface	      on
 	      GenerateAllocFcn	      off
+	      GenerateSharedConstants on
 	      UseMalloc		      off
 	      ExtMode		      off
 	      ExtModeStaticAlloc      off
@@ -932,7 +937,7 @@ Model {
   }
   System {
     Name		    "AM1"
-    Location		    [16, 52, 1220, 982]
+    Location		    [568, 341, 1772, 1271]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -944,7 +949,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "175"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "13"
     Block {
@@ -976,7 +981,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"FFT Conversion"
-	Location		[317, 92, 828, 380]
+	Location		[568, 341, 1772, 1271]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1020,7 +1025,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [195, 29, 275, 81]
 	  ZOrder		  -4
-	  LibraryVersion	  "1.294"
+	  LibraryVersion	  "1.297"
 	  SourceBlock		  "dspspect3/Magnitude\nFFT"
 	  SourceType		  "Magnitude FFT"
 	  ContentPreviewEnabled	  off
@@ -1075,7 +1080,7 @@ Model {
       Ports		      [1]
       Position		      [535, 110, 570, 160]
       ZOrder		      -4
-      LibraryVersion	      "1.509"
+      LibraryVersion	      "1.513"
       SourceBlock	      "dspsnks4/Vector\nScope"
       SourceType	      "Vector Scope"
       ScopeProperties	      off
@@ -1139,8 +1144,8 @@ Model {
       ZOrder		      -7
       ForegroundColor	      "magenta"
       Floating		      off
-      Location		      [637, 179, 1019, 452]
-      Open		      off
+      Location		      [172, 622, 554, 895]
+      Open		      on
       NumInputPorts	      "1"
       TickLabels	      "on"
       ZoomMode		      "xonly"
@@ -1148,11 +1153,22 @@ Model {
 	ListType		AxesTitles
 	axes1			"%<SignalLabel>"
       }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
       ShowLegends	      off
       SaveName		      "ScopeData1"
       LimitDataPoints	      off
       SampleInput	      on
       SampleTime	      "1/16000"
+      ScrollMode	      off
     }
     Block {
       BlockType		      Sum
